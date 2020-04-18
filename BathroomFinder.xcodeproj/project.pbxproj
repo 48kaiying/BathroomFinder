@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D8FC25E244A9B4400D6D440 /* BathroomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */; };
+		3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */; };
+		3DA7B3E6244551C100BEDCE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */; };
+		3DA7B3E8244551C100BEDCE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E7244551C100BEDCE0 /* ViewController.swift */; };
+		3DA7B3EB244551C100BEDCE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E9244551C100BEDCE0 /* Main.storyboard */; };
+		3DA7B3ED244551C300BEDCE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA7B3EC244551C300BEDCE0 /* Assets.xcassets */; };
+		3DA7B3F0244551C300BEDCE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA7B3EE244551C300BEDCE0 /* LaunchScreen.storyboard */; };
+		3DA7B3FB244551C300BEDCE0 /* BathroomFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3FA244551C300BEDCE0 /* BathroomFinderTests.swift */; };
+		3DA7B406244551C300BEDCE0 /* BathroomFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B405244551C300BEDCE0 /* BathroomFinderUITests.swift */; };
+		3DA7B414244551F200BEDCE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DA7B413244551F100BEDCE0 /* GoogleService-Info.plist */; };
+		3DB5E295244B987B002499B1 /* Pods_BathroomFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DA7B3F7244551C300BEDCE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DA7B3D8244551C100BEDCE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DA7B3DF244551C100BEDCE0;
+			remoteInfo = BathroomFinder;
+		};
+		3DA7B402244551C300BEDCE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DA7B3D8244551C100BEDCE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DA7B3DF244551C100BEDCE0;
+			remoteInfo = BathroomFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DBFF3E0A66E78B5CFFCFD98 /* Pods-BathroomFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BathroomFinder.debug.xcconfig"; path = "Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomAnnotation.swift; sourceTree = "<group>"; };
+		3DA7B3E0244551C100BEDCE0 /* BathroomFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathroomFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3DA7B3E7244551C100BEDCE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DA7B3EA244551C100BEDCE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DA7B3EC244551C300BEDCE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DA7B3EF244551C300BEDCE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DA7B3F1244551C300BEDCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA7B3F6244551C300BEDCE0 /* BathroomFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BathroomFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA7B3FA244551C300BEDCE0 /* BathroomFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomFinderTests.swift; sourceTree = "<group>"; };
+		3DA7B3FC244551C300BEDCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA7B401244551C300BEDCE0 /* BathroomFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BathroomFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA7B405244551C300BEDCE0 /* BathroomFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomFinderUITests.swift; sourceTree = "<group>"; };
+		3DA7B407244551C300BEDCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA7B413244551F100BEDCE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DB5E288244B94C0002499B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3DB5E28A244B94D3002499B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3DB5E28C244B94DD002499B1 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E735E371D7F8EA43724E4C /* Pods-BathroomFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BathroomFinder.release.xcconfig"; path = "Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder.release.xcconfig"; sourceTree = "<group>"; };
+		F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BathroomFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DA7B3DD244551C100BEDCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB5E295244B987B002499B1 /* Pods_BathroomFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3F3244551C300BEDCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3FE244551C300BEDCE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DA7B3D7244551C100BEDCE0 = {
+			isa = PBXGroup;
+			children = (
+				3DA7B3E2244551C100BEDCE0 /* BathroomFinder */,
+				3DA7B3F9244551C300BEDCE0 /* BathroomFinderTests */,
+				3DA7B404244551C300BEDCE0 /* BathroomFinderUITests */,
+				3DA7B3E1244551C100BEDCE0 /* Products */,
+				6DBE69495BCE9BB409F94B03 /* Pods */,
+				74C0AB0B8EAF4DB2993C30CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DA7B3E1244551C100BEDCE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DA7B3E0244551C100BEDCE0 /* BathroomFinder.app */,
+				3DA7B3F6244551C300BEDCE0 /* BathroomFinderTests.xctest */,
+				3DA7B401244551C300BEDCE0 /* BathroomFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DA7B3E2244551C100BEDCE0 /* BathroomFinder */ = {
+			isa = PBXGroup;
+			children = (
+				3DA7B413244551F100BEDCE0 /* GoogleService-Info.plist */,
+				3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */,
+				3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */,
+				3DA7B3E7244551C100BEDCE0 /* ViewController.swift */,
+				3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */,
+				3DA7B3E9244551C100BEDCE0 /* Main.storyboard */,
+				3DA7B3EC244551C300BEDCE0 /* Assets.xcassets */,
+				3DA7B3EE244551C300BEDCE0 /* LaunchScreen.storyboard */,
+				3DA7B3F1244551C300BEDCE0 /* Info.plist */,
+			);
+			path = BathroomFinder;
+			sourceTree = "<group>";
+		};
+		3DA7B3F9244551C300BEDCE0 /* BathroomFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DA7B3FA244551C300BEDCE0 /* BathroomFinderTests.swift */,
+				3DA7B3FC244551C300BEDCE0 /* Info.plist */,
+			);
+			path = BathroomFinderTests;
+			sourceTree = "<group>";
+		};
+		3DA7B404244551C300BEDCE0 /* BathroomFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3DA7B405244551C300BEDCE0 /* BathroomFinderUITests.swift */,
+				3DA7B407244551C300BEDCE0 /* Info.plist */,
+			);
+			path = BathroomFinderUITests;
+			sourceTree = "<group>";
+		};
+		6DBE69495BCE9BB409F94B03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DBFF3E0A66E78B5CFFCFD98 /* Pods-BathroomFinder.debug.xcconfig */,
+				45E735E371D7F8EA43724E4C /* Pods-BathroomFinder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		74C0AB0B8EAF4DB2993C30CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DB5E28C244B94DD002499B1 /* FirebaseDatabase.framework */,
+				3DB5E28A244B94D3002499B1 /* CoreLocation.framework */,
+				3DB5E288244B94C0002499B1 /* MapKit.framework */,
+				F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DA7B3DF244551C100BEDCE0 /* BathroomFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DA7B40A244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinder" */;
+			buildPhases = (
+				0DC752239E36F7B744384E3C /* [CP] Check Pods Manifest.lock */,
+				3DA7B3DC244551C100BEDCE0 /* Sources */,
+				3DA7B3DD244551C100BEDCE0 /* Frameworks */,
+				3DA7B3DE244551C100BEDCE0 /* Resources */,
+				8A205A9D5CEAA04A0E5E8979 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BathroomFinder;
+			productName = BathroomFinder;
+			productReference = 3DA7B3E0244551C100BEDCE0 /* BathroomFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DA7B3F5244551C300BEDCE0 /* BathroomFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DA7B40D244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinderTests" */;
+			buildPhases = (
+				3DA7B3F2244551C300BEDCE0 /* Sources */,
+				3DA7B3F3244551C300BEDCE0 /* Frameworks */,
+				3DA7B3F4244551C300BEDCE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DA7B3F8244551C300BEDCE0 /* PBXTargetDependency */,
+			);
+			name = BathroomFinderTests;
+			productName = BathroomFinderTests;
+			productReference = 3DA7B3F6244551C300BEDCE0 /* BathroomFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3DA7B400244551C300BEDCE0 /* BathroomFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DA7B410244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinderUITests" */;
+			buildPhases = (
+				3DA7B3FD244551C300BEDCE0 /* Sources */,
+				3DA7B3FE244551C300BEDCE0 /* Frameworks */,
+				3DA7B3FF244551C300BEDCE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DA7B403244551C300BEDCE0 /* PBXTargetDependency */,
+			);
+			name = BathroomFinderUITests;
+			productName = BathroomFinderUITests;
+			productReference = 3DA7B401244551C300BEDCE0 /* BathroomFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DA7B3D8244551C100BEDCE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Kaiying;
+				TargetAttributes = {
+					3DA7B3DF244551C100BEDCE0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3DA7B3F5244551C300BEDCE0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3DA7B3DF244551C100BEDCE0;
+					};
+					3DA7B400244551C300BEDCE0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3DA7B3DF244551C100BEDCE0;
+					};
+				};
+			};
+			buildConfigurationList = 3DA7B3DB244551C100BEDCE0 /* Build configuration list for PBXProject "BathroomFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DA7B3D7244551C100BEDCE0;
+			productRefGroup = 3DA7B3E1244551C100BEDCE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DA7B3DF244551C100BEDCE0 /* BathroomFinder */,
+				3DA7B3F5244551C300BEDCE0 /* BathroomFinderTests */,
+				3DA7B400244551C300BEDCE0 /* BathroomFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DA7B3DE244551C100BEDCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA7B3F0244551C300BEDCE0 /* LaunchScreen.storyboard in Resources */,
+				3DA7B414244551F200BEDCE0 /* GoogleService-Info.plist in Resources */,
+				3DA7B3ED244551C300BEDCE0 /* Assets.xcassets in Resources */,
+				3DA7B3EB244551C100BEDCE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3F4244551C300BEDCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3FF244551C300BEDCE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DC752239E36F7B744384E3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BathroomFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A205A9D5CEAA04A0E5E8979 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DA7B3DC244551C100BEDCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA7B3E8244551C100BEDCE0 /* ViewController.swift in Sources */,
+				3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */,
+				3D8FC25E244A9B4400D6D440 /* BathroomAnnotation.swift in Sources */,
+				3DA7B3E6244551C100BEDCE0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3F2244551C300BEDCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA7B3FB244551C300BEDCE0 /* BathroomFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DA7B3FD244551C300BEDCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA7B406244551C300BEDCE0 /* BathroomFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DA7B3F8244551C300BEDCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DA7B3DF244551C100BEDCE0 /* BathroomFinder */;
+			targetProxy = 3DA7B3F7244551C300BEDCE0 /* PBXContainerItemProxy */;
+		};
+		3DA7B403244551C300BEDCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DA7B3DF244551C100BEDCE0 /* BathroomFinder */;
+			targetProxy = 3DA7B402244551C300BEDCE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DA7B3E9244551C100BEDCE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DA7B3EA244551C100BEDCE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DA7B3EE244551C300BEDCE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DA7B3EF244551C300BEDCE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DA7B408244551C300BEDCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DA7B409244551C300BEDCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DA7B40B244551C300BEDCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DBFF3E0A66E78B5CFFCFD98 /* Pods-BathroomFinder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CS766HD632;
+				INFOPLIST_FILE = BathroomFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DA7B40C244551C300BEDCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E735E371D7F8EA43724E4C /* Pods-BathroomFinder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CS766HD632;
+				INFOPLIST_FILE = BathroomFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3DA7B40E244551C300BEDCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BathroomFinderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BathroomFinder.app/BathroomFinder";
+			};
+			name = Debug;
+		};
+		3DA7B40F244551C300BEDCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BathroomFinderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BathroomFinder.app/BathroomFinder";
+			};
+			name = Release;
+		};
+		3DA7B411244551C300BEDCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BathroomFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BathroomFinder;
+			};
+			name = Debug;
+		};
+		3DA7B412244551C300BEDCE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BathroomFinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = none.BathroomFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BathroomFinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DA7B3DB244551C100BEDCE0 /* Build configuration list for PBXProject "BathroomFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA7B408244551C300BEDCE0 /* Debug */,
+				3DA7B409244551C300BEDCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DA7B40A244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA7B40B244551C300BEDCE0 /* Debug */,
+				3DA7B40C244551C300BEDCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DA7B40D244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA7B40E244551C300BEDCE0 /* Debug */,
+				3DA7B40F244551C300BEDCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DA7B410244551C300BEDCE0 /* Build configuration list for PBXNativeTarget "BathroomFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA7B411244551C300BEDCE0 /* Debug */,
+				3DA7B412244551C300BEDCE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DA7B3D8244551C100BEDCE0 /* Project object */;
+}

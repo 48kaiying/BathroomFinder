@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>545800420798-jeo7b95uvnp1v9hgfv80ob8r3a50jra6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.545800420798-jeo7b95uvnp1v9hgfv80ob8r3a50jra6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAp3t40CKZr1nojAktJvEmQC1AmCR_NsOA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>545800420798</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>none.BathroomFinder</string>
+	<key>PROJECT_ID</key>
+	<string>bathroomfinder-2171e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bathroomfinder-2171e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:545800420798:ios:4be315779b0c2a666e8def</string>
+	<key>DATABASE_URL</key>
+	<string>https://bathroomfinder-2171e.firebaseio.com</string>
+</dict>
+</plist>
