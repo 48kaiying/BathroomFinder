@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0BB439244D3243006EE9EB /* BathroomDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BB438244D3243006EE9EB /* BathroomDetailVC.swift */; };
 		3D8FC25E244A9B4400D6D440 /* BathroomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */; };
 		3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */; };
 		3DA7B3E6244551C100BEDCE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1DBFF3E0A66E78B5CFFCFD98 /* Pods-BathroomFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BathroomFinder.debug.xcconfig"; path = "Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0BB438244D3243006EE9EB /* BathroomDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomDetailVC.swift; sourceTree = "<group>"; };
 		3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomAnnotation.swift; sourceTree = "<group>"; };
 		3DA7B3E0244551C100BEDCE0 /* BathroomFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BathroomFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */,
 				3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */,
 				3DA7B3E7244551C100BEDCE0 /* ViewController.swift */,
+				3D0BB438244D3243006EE9EB /* BathroomDetailVC.swift */,
 				3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */,
 				3DA7B3E9244551C100BEDCE0 /* Main.storyboard */,
 				3DA7B3EC244551C300BEDCE0 /* Assets.xcassets */,
@@ -343,6 +346,7 @@
 				3DA7B3E8244551C100BEDCE0 /* ViewController.swift in Sources */,
 				3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */,
 				3D8FC25E244A9B4400D6D440 /* BathroomAnnotation.swift in Sources */,
+				3D0BB439244D3243006EE9EB /* BathroomDetailVC.swift in Sources */,
 				3DA7B3E6244551C100BEDCE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

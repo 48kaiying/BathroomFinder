@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         
         guard let url = URL(string: urlString) else {return}
         
-        //print(url)
+        print(url)
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
