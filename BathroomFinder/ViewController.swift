@@ -45,7 +45,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // something
-//        centerMapOnPerson()
     }
     
     func checkLocationServices() {
@@ -133,9 +132,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BathroomDetailVC_Seg" {
-            if let bathroomDetailVC = segue.destination as? BathroomDetailVC {
-                if let sender = sender as? MKAnnotationView {
-                    if let annotation = sender.annotation as? BathroomAnnocatation {
+            if let sender = sender as? MKAnnotationView {
+                if let annotation = sender.annotation as? BathroomAnnocatation {
+                    if let bathroomDetailVC = segue.destination as? BathroomDetailVC {
                         bathroomDetailVC.bathroom = annotation.bathroom;
                         print("yo1")
                     }
@@ -172,7 +171,7 @@ extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("yo3")
-        performSegue(withIdentifier: "BathroomDetailVC_Seg", sender: view)
+        self.performSegue(withIdentifier: "BathroomDetailVC_Seg", sender: view)
     }
 }
 

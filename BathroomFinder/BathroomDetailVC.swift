@@ -21,7 +21,7 @@ import UIKit
 //let longitude : Double?
 //let distance : Double?
 
-class BathroomDetailVC : ViewController {
+class BathroomDetailVC : UIViewController {
     
     var bathroom : Bathroom!
     @IBOutlet var name : UILabel!
@@ -67,5 +67,4 @@ class BathroomDetailVC : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 }

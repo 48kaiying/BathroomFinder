@@ -191,6 +191,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LiB-j4-d9f"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cyt-1Y-Xq8"/>
                     <connections>
                         <outlet property="accessibleImage" destination="adx-EY-MZP" id="V88-tQ-uCQ"/>
                         <outlet property="address" destination="KEi-DW-Lc9" id="SD6-QS-cgT"/>
