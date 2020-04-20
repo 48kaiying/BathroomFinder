@@ -19,9 +19,11 @@ struct Bathroom : Codable {
     let accessible : Bool?
     let unisex : Bool?
     let directions : String?
+    let comment : String?
     let latitude : Double?
     let longitude : Double?
     let distance : Double?
+    let upvote : Int?
 }
 
 class ViewController: UIViewController {
@@ -111,7 +113,7 @@ class ViewController: UIViewController {
                     for br : Bathroom in decodedResponse {
                         if let lat = br.latitude, let lng = br.longitude, let brId = br.id {
                             let coord = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-                            let newBr = BathroomAnnocatation(coordinate: coord, id: brId)
+                            let newBr = BathroomAnnocatation(coordinate: coord, id: brId, bathroom: br)
                             self.myBathrooms.append(newBr)
                         }
                     }
@@ -127,6 +129,19 @@ class ViewController: UIViewController {
             }
         }
         task.resume();
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BathroomDetailVC_Seg" {
+            if let bathroomDetailVC = segue.destination as? BathroomDetailVC {
+                if let sender = sender as? MKAnnotationView {
+                    if let annotation = sender.annotation as? BathroomAnnocatation {
+                        bathroomDetailVC.bathroom = annotation.bathroom;
+                        print("yo1")
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -153,6 +168,11 @@ extension ViewController: MKMapViewDelegate {
             annotationView.image = UIImage(named:"brIcon")
         }
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("yo3")
+        performSegue(withIdentifier: "BathroomDetailVC_Seg", sender: view)
     }
 }
 

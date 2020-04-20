@@ -9,9 +9,12 @@
 import MapKit
 
 class BathroomAnnocatation : MKPointAnnotation {
-    var id: Int
-    init(coordinate: CLLocationCoordinate2D, id: Int) {
+    let id: Int
+    let bathroom : Bathroom
+    
+    init(coordinate: CLLocationCoordinate2D, id: Int, bathroom : Bathroom) {
         self.id = id
+        self.bathroom = bathroom
         super.init()
         self.coordinate = coordinate
     }

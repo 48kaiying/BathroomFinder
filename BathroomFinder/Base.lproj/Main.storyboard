@@ -30,8 +30,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Egy-at-tVk"/>
                     <connections>
-                        <outlet property="mapview" destination="46e-bK-T89" id="obA-KA-zkf"/>
-                        <segue destination="LeM-FF-DF9" kind="show" id="qfo-Es-T0K"/>
+                        <outlet property="mapview" destination="46e-bK-T89" id="9UK-Vr-9FA"/>
+                        <segue destination="LeM-FF-DF9" kind="show" identifier="BathroomDetailVC_Seg" id="qfo-Es-T0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
