@@ -38,7 +38,7 @@ class BathroomDetailVC : UIViewController {
             name.text = bathroom.name ?? "Untitled"
             if let dis = bathroom.distance {
                 let roundedDis = round((dis)*100)/100
-                distance.text = String(roundedDis)
+                distance.text = "\(roundedDis) miles away"
             } else {
                 distance.text = ""
             }
