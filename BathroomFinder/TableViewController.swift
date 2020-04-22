@@ -15,6 +15,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     @IBOutlet var tableview : UITableView!
     
     var myBathrooms : [Bathroom] = []
+    var selectedBathroom : Bathroom! = nil
     
     override func viewDidLoad() {
         setUpTableView()
@@ -40,7 +41,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrCell")!
         
         if let name = cell.viewWithTag(1) as? UILabel {
-            name.text = bathroom.name ?? "Untitled"
+            name.text = bathroom.name ?? "Bathroom # \(String(describing: bathroom.id)) "
         }
         
         if let address = cell.viewWithTag(2) as? UILabel {
@@ -50,47 +51,61 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         if let distance = cell.viewWithTag(3) as? UILabel {
             if let dis = bathroom.distance {
                 let roundedDis = round((dis)*100)/100
-                distance.text = "\(roundedDis) miles away"
+                distance.text = "\(roundedDis)mi"
             } else {
                 distance.text = ""
             }
         }
         
-        if let accessible = cell.viewWithTag(4) as? UILabel {
-            var a = false;
-            if let acc = bathroom.accessible {
-                a = acc;
-            }
-            if (a) {
-                accessible.tintColor = .systemIndigo
-                accessible.text = "ADA Accessible"
-            } else {
-                accessible.tintColor = .systemGray
-                accessible.text = ""
-            }
-        }
+        // change to icons
+//        if let accessible = cell.viewWithTag(4) as? UILabel {
+//            var a = false;
+//            if let acc = bathroom.accessible {
+//                a = acc;
+//            }
+//            if (a) {
+//                accessible.tintColor = .systemIndigo
+//                accessible.text = "ADA Accessible"
+//            } else {
+//                accessible.tintColor = .systemGray
+//                accessible.text = ""
+//            }
+//        }
+//
+//        if let unisex = cell.viewWithTag(5) as? UILabel {
+//            var u = false;
+//            if let uni = bathroom.unisex {
+//                u = uni;
+//            }
+//            if (u) {
+//                unisex.tintColor = .systemIndigo
+//                unisex.text = "Unisex"
+//            } else {
+//                unisex.text = ""
+//            }
+//        }
         
-        if let unisex = cell.viewWithTag(5) as? UILabel {
-            var u = false;
-            if let uni = bathroom.unisex {
-                u = uni;
-            }
-            if (u) {
-                unisex.tintColor = .systemIndigo
-                unisex.text = "Unisex"
-            } else {
-                unisex.text = ""
-            }
-        }
-        
-        
-        if let brImage = cell.viewWithTag(6) as? UIImageView {
-            brImage.image = UIImage(named: "brIcon")
+        if let heart = cell.viewWithTag(7) as? UILabel {
+            heart.text = "\(String(describing: bathroom.upvote)) ?? 0"
         }
         
         cell.accessoryType = .disclosureIndicator
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.selectedBathroom = myBathrooms[indexPath.row]
+        performSegue(withIdentifier: "TVCtoDVC_Seg", sender: tableView)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TVCtoDVC_Seg" {
+            if let bathroomDetailVC = segue.destination as? BathroomDetailVC {
+                bathroomDetailVC.bathroom = selectedBathroom;
+            }
+        }
     }
     
     func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
