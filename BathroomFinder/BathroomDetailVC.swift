@@ -51,15 +51,22 @@ class BathroomDetailVC : UIViewController {
             comment.text = bathroom.comment ?? "There are no comments for this bathroom"
             
             if let acc = bathroom.accessible {
+                //print("acc is: \(acc)")
+                if (acc) { accessibleImage.tintColor = .systemIndigo
+                } else { accessibleImage.tintColor = .systemGray }
                 accessibleImage.isHighlighted = acc
             } else {
-                accessibleImage.isHighlighted = false
+                accessibleImage.isHighlighted = false;
+                //accessibleImage.image = UIImage(named: "xmark.circle")
             }
             
             if let unisex = bathroom.unisex {
-                accessibleImage.isHighlighted = unisex
+                //print("unisex is: \(unisex)")
+                if (unisex) { unisexImage.tintColor = .systemIndigo
+                } else { unisexImage.tintColor = .systemGray }
+                unisexImage.isHighlighted = unisex
             } else {
-                accessibleImage.isHighlighted = false
+                unisexImage.isHighlighted = false;
             }
         }
     }

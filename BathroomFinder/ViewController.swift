@@ -136,7 +136,6 @@ class ViewController: UIViewController {
                 if let annotation = sender.annotation as? BathroomAnnocatation {
                     if let bathroomDetailVC = segue.destination as? BathroomDetailVC {
                         bathroomDetailVC.bathroom = annotation.bathroom;
-                        print("yo1")
                     }
                 }
             }
@@ -170,7 +169,6 @@ extension ViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("yo3")
         self.performSegue(withIdentifier: "BathroomDetailVC_Seg", sender: view)
     }
 }
