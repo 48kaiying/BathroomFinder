@@ -29,6 +29,7 @@ struct Bathroom : Codable {
 class ViewController: UIViewController {
     
     @IBOutlet var mapview : MKMapView!
+    @IBOutlet var tableview : UITableView! 
     
     let locationManager = CLLocationManager()
     
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
         
         guard let url = URL(string: urlString) else {return}
         
-        print(url)
+        //print(url)
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
