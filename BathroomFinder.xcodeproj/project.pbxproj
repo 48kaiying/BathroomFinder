@@ -20,6 +20,7 @@
 		3DA7B414244551F200BEDCE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DA7B413244551F100BEDCE0 /* GoogleService-Info.plist */; };
 		3DB5E295244B987B002499B1 /* Pods_BathroomFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */; };
 		3DC6BE472450D0C00077F493 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE462450D0C00077F493 /* TableViewController.swift */; };
+		3DC6BE492450FC640077F493 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE482450FC640077F493 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3DB5E28A244B94D3002499B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DB5E28C244B94DD002499B1 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6BE462450D0C00077F493 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3DC6BE482450FC640077F493 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		45E735E371D7F8EA43724E4C /* Pods-BathroomFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BathroomFinder.release.xcconfig"; path = "Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder.release.xcconfig"; sourceTree = "<group>"; };
 		F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BathroomFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				3DC6BE462450D0C00077F493 /* TableViewController.swift */,
 				3D0BB438244D3243006EE9EB /* BathroomDetailVC.swift */,
 				3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */,
+				3DC6BE482450FC640077F493 /* DataManager.swift */,
 				3DA7B3E9244551C100BEDCE0 /* Main.storyboard */,
 				3DA7B3EC244551C300BEDCE0 /* Assets.xcassets */,
 				3DA7B3EE244551C300BEDCE0 /* LaunchScreen.storyboard */,
@@ -349,6 +352,7 @@
 				3DA7B3E8244551C100BEDCE0 /* ViewController.swift in Sources */,
 				3DC6BE472450D0C00077F493 /* TableViewController.swift in Sources */,
 				3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */,
+				3DC6BE492450FC640077F493 /* DataManager.swift in Sources */,
 				3D8FC25E244A9B4400D6D440 /* BathroomAnnotation.swift in Sources */,
 				3D0BB439244D3243006EE9EB /* BathroomDetailVC.swift in Sources */,
 				3DA7B3E6244551C100BEDCE0 /* SceneDelegate.swift in Sources */,

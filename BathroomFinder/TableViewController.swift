@@ -14,12 +14,15 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     @IBOutlet var searchbar : UISearchBar!
     @IBOutlet var tableview : UITableView!
     
-    var myBathrooms : [Bathroom] = []
+//    var myBathrooms : [Bathroom] = []
     var selectedBathroom : Bathroom! = nil
     
     override func viewDidLoad() {
         setUpTableView()
-        makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20)
+        DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+//            self.myBathrooms = DataManger.dm.getBathrooms()
+            self.tableview.reloadData()
+        })
     }
     
     func setUpTableView() {
@@ -29,7 +32,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // todo should be bathrooms.count
-        return myBathrooms.count;
+        return DataManger.shared.getBathroomCount();
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +40,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bathroom = myBathrooms[indexPath.row]
+        let bathroom = DataManger.shared.getBathroom(at: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrCell")!
         
         if let name = cell.viewWithTag(1) as? UILabel {
@@ -96,7 +99,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.selectedBathroom = myBathrooms[indexPath.row]
+        self.selectedBathroom = DataManger.shared.getBathroom(at: indexPath.row)
         performSegue(withIdentifier: "TVCtoDVC_Seg", sender: tableView)
     }
     
@@ -108,33 +111,33 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         }
     }
     
-    func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
-        let numPages = 1;
-        let offset = 0;
-        let lat : Double = position.latitude
-        let lng : Double = position.longitude
-        
-        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(accessible)&unisex=\(unisex)&lat=\(lat)&lng=\(lng)"
-        
-        guard let url = URL(string: urlString) else {return}
-        
-        //print(url)
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                if let decodedResponse = try?
-                    JSONDecoder().decode([Bathroom].self, from: data) {
-                    //print(1)
-                    //dump(decodedResponse)
-                    self.myBathrooms = decodedResponse
-                    DispatchQueue.main.async {
-                        self.tableview.reloadData()
-                    }
-                } else {
-                    print("failed trying to decode data")
-                }
-            }
-        }
-        task.resume();
-    }
+//    func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
+//        let numPages = 1;
+//        let offset = 0;
+//        let lat : Double = position.latitude
+//        let lng : Double = position.longitude
+//
+//        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(accessible)&unisex=\(unisex)&lat=\(lat)&lng=\(lng)"
+//
+//        guard let url = URL(string: urlString) else {return}
+//
+//        //print(url)
+//
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if let data = data {
+//                if let decodedResponse = try?
+//                    JSONDecoder().decode([Bathroom].self, from: data) {
+//                    //print(1)
+//                    //dump(decodedResponse)
+//                    self.myBathrooms = decodedResponse
+//                    DispatchQueue.main.async {
+//                        self.tableview.reloadData()
+//                    }
+//                } else {
+//                    print("failed trying to decode data")
+//                }
+//            }
+//        }
+//        task.resume();
+//    }
 }
