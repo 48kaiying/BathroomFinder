@@ -83,12 +83,13 @@ class ViewController: UIViewController {
             let regionRadius : CLLocationDistance = 1000
             let region = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
             mapview.setRegion(region, animated: true)
-            makeAPIRequest(at: location, accessible: false, unisex: false, limit: 20)
+            DataManger.shared.setUserCoord(location)
+            makeAPIRequest(at: location)
         }
     }
     
-    func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
-        DataManger.shared.makeAPIRequest(at: position, accessible: accessible, unisex: unisex, limit: limit, calling:{
+    func makeAPIRequest(at position: CLLocationCoordinate2D) {
+        DataManger.shared.makeAPIRequest(at: position, calling:{
             var brAnnotations : [BathroomAnnocatation] = []
             for br : Bathroom in DataManger.shared.getBathrooms() {
                 if let lat = br.latitude, let lng = br.longitude, let brId = br.id {
@@ -153,7 +154,8 @@ extension ViewController: CLLocationManagerDelegate {
         let regionRadius : CLLocationDistance = 1000
         let region = MKCoordinateRegion(center: center, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapview.setRegion(region, animated: true)
-        makeAPIRequest(at: center, accessible: false, unisex: false, limit: 20)
+        DataManger.shared.setUserCoord(center)
+        makeAPIRequest(at: center)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

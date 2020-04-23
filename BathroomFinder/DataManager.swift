@@ -11,13 +11,13 @@ import MapKit
 class DataManger {
     
     static let shared : DataManger = DataManger()
-    private var userCoord : CLLocation
+    private var userCoord : CLLocationCoordinate2D
     private var adaOn : Bool
     private var unisexOn : Bool
     private var myBathrooms : [Bathroom]
     
     init() {
-        userCoord = CLLocation(latitude: 0, longitude: 0)
+        userCoord = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         adaOn = false
         unisexOn = false
         myBathrooms = []
@@ -33,11 +33,11 @@ class DataManger {
         return unisexOn
     }
     
-    func setUserCoord(_ location : CLLocation) {
+    func setUserCoord(_ location : CLLocationCoordinate2D) {
         userCoord = location
     }
 
-    func getUserCoord() -> CLLocation {
+    func getUserCoord() -> CLLocationCoordinate2D {
         return userCoord
     }
     
@@ -53,9 +53,10 @@ class DataManger {
         return myBathrooms[index]
     }
     
-    func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int, calling: @escaping () -> ()) {
-        let numPages = 1;
-        let offset = 0;
+    func makeAPIRequest(at position: CLLocationCoordinate2D, calling: @escaping () -> ()) {
+        let limit : Int = 20
+        let numPages = 1
+        let offset = 0
         let lat : Double = position.latitude
         let lng : Double = position.longitude
         
@@ -79,5 +80,9 @@ class DataManger {
             }
         }
         task.resume();
+    }
+    
+    func makeAPIRequest(calling: @escaping () -> ()) {
+        self.makeAPIRequest(at: userCoord, calling: calling)
     }
 }

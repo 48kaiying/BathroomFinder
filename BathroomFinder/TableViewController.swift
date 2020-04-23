@@ -20,7 +20,11 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     
     override func viewDidLoad() {
         setUpTableView()
-        DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+        self.uButton.setTitleColor(.systemGray, for: .normal)
+        self.uButton.backgroundColor = .white
+        self.adaButton.setTitleColor(.systemGray, for: .normal)
+        self.adaButton.backgroundColor = .white
+        DataManger.shared.makeAPIRequest(calling: {
             self.tableview.reloadData()
         })
     }
@@ -114,7 +118,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     @IBAction func onClick(_ sender: UIButton) {
         if (sender == self.adaButton) {
             let highlighted = DataManger.shared.toggleAda();
-            DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+            DataManger.shared.makeAPIRequest(calling: {
                 if (highlighted) {
                     self.adaButton.setTitleColor(.white, for: .normal)
                     self.adaButton.backgroundColor = .systemIndigo
@@ -127,7 +131,7 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
             })
         } else if (sender == self.uButton) {
             let highlighted = DataManger.shared.toggleUnisex();
-            DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+            DataManger.shared.makeAPIRequest(calling: {
                 if (highlighted) {
                     self.uButton.setTitleColor(.white, for: .normal)
                     self.uButton.backgroundColor = .systemIndigo
@@ -139,6 +143,5 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
                 self.tableview.reloadData()
             })
         }
-        
     }
 }
