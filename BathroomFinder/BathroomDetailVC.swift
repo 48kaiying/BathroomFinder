@@ -35,7 +35,9 @@ class BathroomDetailVC : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if let bathroom = bathroom {
-            name.text = bathroom.name ?? "Untitled"
+            let id = bathroom.id ?? 0
+            name.text = bathroom.name ?? "Bathroom # \(id)"
+            
             if let dis = bathroom.distance {
                 let roundedDis = round((dis)*100)/100
                 distance.text = "\(roundedDis) miles away"
@@ -56,7 +58,7 @@ class BathroomDetailVC : UIViewController {
                 } else { accessibleImage.tintColor = .systemGray }
                 accessibleImage.isHighlighted = acc
             } else {
-                accessibleImage.isHighlighted = false;
+                accessibleImage.isHighlighted = false
             }
             
             if let unisex = bathroom.unisex {
@@ -65,7 +67,7 @@ class BathroomDetailVC : UIViewController {
                 } else { unisexImage.tintColor = .systemGray }
                 unisexImage.isHighlighted = unisex
             } else {
-                unisexImage.isHighlighted = false;
+                unisexImage.isHighlighted = false
             }
         }
     }

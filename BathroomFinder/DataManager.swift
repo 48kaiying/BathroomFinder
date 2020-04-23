@@ -54,7 +54,7 @@ class DataManger {
     }
     
     func makeAPIRequest(at position: CLLocationCoordinate2D, calling: @escaping () -> ()) {
-        let limit : Int = 20
+        let limit : Int = 100
         let numPages = 1
         let offset = 0
         let lat : Double = position.latitude
