@@ -57,7 +57,6 @@ class BathroomDetailVC : UIViewController {
                 accessibleImage.isHighlighted = acc
             } else {
                 accessibleImage.isHighlighted = false;
-                //accessibleImage.image = UIImage(named: "xmark.circle")
             }
             
             if let unisex = bathroom.unisex {

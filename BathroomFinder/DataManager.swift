@@ -12,17 +12,31 @@ class DataManger {
     
     static let shared : DataManger = DataManger()
     private var userCoord : CLLocation
+    private var adaOn : Bool
+    private var unisexOn : Bool
     private var myBathrooms : [Bathroom]
     
     init() {
-        userCoord = CLLocation(latitude: 0, longitude: 0);
+        userCoord = CLLocation(latitude: 0, longitude: 0)
+        adaOn = false
+        unisexOn = false
         myBathrooms = []
+    }
+    
+    func toggleAda() -> Bool {
+        adaOn = !adaOn
+        return adaOn
+    }
+    
+    func toggleUnisex() -> Bool {
+        unisexOn = !unisexOn
+        return unisexOn
     }
     
     func setUserCoord(_ location : CLLocation) {
         userCoord = location
     }
-    
+
     func getUserCoord() -> CLLocation {
         return userCoord
     }
@@ -45,10 +59,10 @@ class DataManger {
         let lat : Double = position.latitude
         let lng : Double = position.longitude
         
-        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(accessible)&unisex=\(unisex)&lat=\(lat)&lng=\(lng)"
+        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(self.adaOn)&unisex=\(self.unisexOn)&lat=\(lat)&lng=\(lng)"
         
         guard let url = URL(string: urlString) else {return}
-        //print(url)
+        print(url)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 if let decodedResponse = try?

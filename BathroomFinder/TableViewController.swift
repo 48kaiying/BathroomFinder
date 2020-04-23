@@ -13,6 +13,9 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     
     @IBOutlet var searchbar : UISearchBar!
     @IBOutlet var tableview : UITableView!
+    @IBOutlet var adaButton : UIButton!
+    @IBOutlet var uButton : UIButton!
+    
     var selectedBathroom : Bathroom! = nil
     
     override func viewDidLoad() {
@@ -106,5 +109,36 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
                 bathroomDetailVC.bathroom = selectedBathroom;
             }
         }
+    }
+    
+    @IBAction func onClick(_ sender: UIButton) {
+        if (sender == self.adaButton) {
+            let highlighted = DataManger.shared.toggleAda();
+            DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+                if (highlighted) {
+                    self.adaButton.setTitleColor(.white, for: .normal)
+                    self.adaButton.backgroundColor = .systemIndigo
+                } else {
+                    self.adaButton.setTitleColor(.systemGray, for: .normal)
+                    self.adaButton.backgroundColor = .white
+                }
+                // todo loading sign or something
+                self.tableview.reloadData()
+            })
+        } else if (sender == self.uButton) {
+            let highlighted = DataManger.shared.toggleUnisex();
+            DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
+                if (highlighted) {
+                    self.uButton.setTitleColor(.white, for: .normal)
+                    self.uButton.backgroundColor = .systemIndigo
+                } else {
+                    self.uButton.setTitleColor(.systemGray, for: .normal)
+                    self.uButton.backgroundColor = .white
+                }
+                // todo loading sign or something
+                self.tableview.reloadData()
+            })
+        }
+        
     }
 }
