@@ -21,6 +21,8 @@
 		3DB5E295244B987B002499B1 /* Pods_BathroomFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */; };
 		3DC6BE472450D0C00077F493 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE462450D0C00077F493 /* TableViewController.swift */; };
 		3DC6BE492450FC640077F493 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE482450FC640077F493 /* DataManager.swift */; };
+		3DC6BE4D24520E8F0077F493 /* SuggestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE4C24520E8F0077F493 /* SuggestionsTableViewController.swift */; };
+		3DC6BE51245215730077F493 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6BE50245215730077F493 /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		3DB5E28C244B94DD002499B1 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6BE462450D0C00077F493 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3DC6BE482450FC640077F493 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3DC6BE4C24520E8F0077F493 /* SuggestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTableViewController.swift; sourceTree = "<group>"; };
+		3DC6BE50245215730077F493 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		45E735E371D7F8EA43724E4C /* Pods-BathroomFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BathroomFinder.release.xcconfig"; path = "Target Support Files/Pods-BathroomFinder/Pods-BathroomFinder.release.xcconfig"; sourceTree = "<group>"; };
 		F110F5E9F73F798521622B34 /* Pods_BathroomFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BathroomFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,7 +127,9 @@
 				3DA7B3E3244551C100BEDCE0 /* AppDelegate.swift */,
 				3DA7B3E5244551C100BEDCE0 /* SceneDelegate.swift */,
 				3DA7B3E7244551C100BEDCE0 /* ViewController.swift */,
+				3DC6BE4C24520E8F0077F493 /* SuggestionsTableViewController.swift */,
 				3DC6BE462450D0C00077F493 /* TableViewController.swift */,
+				3DC6BE50245215730077F493 /* SearchController.swift */,
 				3D0BB438244D3243006EE9EB /* BathroomDetailVC.swift */,
 				3D8FC25D244A9B4400D6D440 /* BathroomAnnotation.swift */,
 				3DC6BE482450FC640077F493 /* DataManager.swift */,
@@ -350,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA7B3E8244551C100BEDCE0 /* ViewController.swift in Sources */,
+				3DC6BE51245215730077F493 /* SearchController.swift in Sources */,
+				3DC6BE4D24520E8F0077F493 /* SuggestionsTableViewController.swift in Sources */,
 				3DC6BE472450D0C00077F493 /* TableViewController.swift in Sources */,
 				3DA7B3E4244551C100BEDCE0 /* AppDelegate.swift in Sources */,
 				3DC6BE492450FC640077F493 /* DataManager.swift in Sources */,

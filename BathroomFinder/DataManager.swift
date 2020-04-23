@@ -33,6 +33,11 @@ class DataManger {
         return unisexOn
     }
     
+    func getRegion() -> MKCoordinateRegion {
+        let regionRadius : CLLocationDistance = 2000
+        return MKCoordinateRegion(center: userCoord, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+    }
+    
     func setUserCoord(_ location : CLLocationCoordinate2D) {
         userCoord = location
     }
@@ -63,7 +68,7 @@ class DataManger {
         let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(self.adaOn)&unisex=\(self.unisexOn)&lat=\(lat)&lng=\(lng)"
         
         guard let url = URL(string: urlString) else {return}
-        print(url)
+        //print(url)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 if let decodedResponse = try?

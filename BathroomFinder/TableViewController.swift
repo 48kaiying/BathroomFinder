@@ -9,12 +9,17 @@
 import UIKit
 import MapKit
 
-class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource {
+class TableViewController: UIViewController, UITableViewDelegate,
+UITableViewDataSource, UITextFieldDelegate {
     
-    @IBOutlet var searchbar : UISearchBar!
+//    @IBOutlet var mySearchBar : UISearchBar!
     @IBOutlet var tableview : UITableView!
     @IBOutlet var adaButton : UIButton!
     @IBOutlet var uButton : UIButton!
+    
+    var searchBar : UISearchBar!
+    
+    var resultSearchController:UISearchController? = nil
     
     var selectedBathroom : Bathroom! = nil
     
@@ -22,9 +27,27 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         setUpTableView()
         setUpButtonView(self.adaButton)
         setUpButtonView(self.uButton)
+        setUpSearchBar()
         DataManger.shared.makeAPIRequest(calling: {
             self.tableview.reloadData()
         })
+    }
+    
+    func setUpSearchBar() {
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "SearchTVC") as! SearchController
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        self.searchBar = resultSearchController!.searchBar
+        self.searchBar.sizeToFit()
+        self.searchBar.placeholder = "Search by location"
+        navigationItem.titleView = resultSearchController?.searchBar
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.obscuresBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        
+        locationSearchTable.delegate = self
     }
     
     func setUpButtonView(_ button: UIButton!) {
@@ -146,3 +169,16 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
         }
     }
 }
+
+extension TableViewController : HandleSearchDelegate
+{
+    func searchFound(_ MKitem: MKPlacemark, _ name : String) {
+        let coord = MKitem.coordinate
+        DataManger.shared.makeAPIRequest(at: coord, calling: {
+            self.tableview.reloadData()
+            self.searchBar.text = name
+        })
+    }
+}
+
+

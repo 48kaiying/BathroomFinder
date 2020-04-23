@@ -29,15 +29,19 @@ struct Bathroom : Codable {
 class ViewController: UIViewController {
     
     @IBOutlet var mapview : MKMapView!
-    @IBOutlet var tableview : UITableView! 
-    
+    @IBOutlet var tableview : UITableView!
+        
     let locationManager = CLLocationManager()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapview.delegate = self
         checkLocationServices()
         locationManager.startUpdatingLocation()
+    }
+    
+    func getMapView() -> MKMapView {
+        return mapview
     }
     
     override func viewDidAppear(_ animated: Bool) {
