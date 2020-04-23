@@ -13,14 +13,11 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
     
     @IBOutlet var searchbar : UISearchBar!
     @IBOutlet var tableview : UITableView!
-    
-//    var myBathrooms : [Bathroom] = []
     var selectedBathroom : Bathroom! = nil
     
     override func viewDidLoad() {
         setUpTableView()
         DataManger.shared.makeAPIRequest(at: CLLocationCoordinate2D(latitude: 37.785834, longitude: -122.406417), accessible: false, unisex: false, limit: 20, calling: {
-//            self.myBathrooms = DataManger.dm.getBathrooms()
             self.tableview.reloadData()
         })
     }
@@ -110,34 +107,4 @@ class TableViewController: UIViewController, UITableViewDelegate,  UITableViewDa
             }
         }
     }
-    
-//    func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
-//        let numPages = 1;
-//        let offset = 0;
-//        let lat : Double = position.latitude
-//        let lng : Double = position.longitude
-//
-//        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(accessible)&unisex=\(unisex)&lat=\(lat)&lng=\(lng)"
-//
-//        guard let url = URL(string: urlString) else {return}
-//
-//        //print(url)
-//
-//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if let data = data {
-//                if let decodedResponse = try?
-//                    JSONDecoder().decode([Bathroom].self, from: data) {
-//                    //print(1)
-//                    //dump(decodedResponse)
-//                    self.myBathrooms = decodedResponse
-//                    DispatchQueue.main.async {
-//                        self.tableview.reloadData()
-//                    }
-//                } else {
-//                    print("failed trying to decode data")
-//                }
-//            }
-//        }
-//        task.resume();
-//    }
 }

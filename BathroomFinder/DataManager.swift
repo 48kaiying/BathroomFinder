@@ -27,9 +27,9 @@ class DataManger {
         return userCoord
     }
     
-//    func getBathrooms() -> [Bathroom] {
-//        return myBathrooms
-//    }
+    func getBathrooms() -> [Bathroom] {
+        return myBathrooms
+    }
     
     func getBathroomCount() -> Int {
         return myBathrooms.count

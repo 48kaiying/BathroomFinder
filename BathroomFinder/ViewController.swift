@@ -32,10 +32,6 @@ class ViewController: UIViewController {
     @IBOutlet var tableview : UITableView! 
     
     let locationManager = CLLocationManager()
-    
-    var apiReqLocation = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    
-    var myBathrooms : [BathroomAnnocatation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,47 +84,22 @@ class ViewController: UIViewController {
             let region = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
             mapview.setRegion(region, animated: true)
             makeAPIRequest(at: location, accessible: false, unisex: false, limit: 20)
-
         }
     }
     
     func makeAPIRequest(at position: CLLocationCoordinate2D, accessible : Bool, unisex : Bool, limit : Int) {
-        let numPages = 1;
-        let offset = 0;
-        let lat : Double = position.latitude
-        let lng : Double = position.longitude
-        
-        let urlString = "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=\(numPages)&per_page=\(limit)&offset=\(offset)&ada=\(accessible)&unisex=\(unisex)&lat=\(lat)&lng=\(lng)"
-        
-        guard let url = URL(string: urlString) else {return}
-        
-        //print(url)
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                if let decodedResponse = try?
-                    JSONDecoder().decode([Bathroom].self, from: data) {
-                    //print(1)
-                    //dump(decodedResponse)
-                    for br : Bathroom in decodedResponse {
-                        if let lat = br.latitude, let lng = br.longitude, let brId = br.id {
-                            let coord = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-                            let newBr = BathroomAnnocatation(coordinate: coord, id: brId, bathroom: br)
-                            self.myBathrooms.append(newBr)
-                        }
-                    }
-                    // update APIreqLocation
-                    self.apiReqLocation = position
-                    DispatchQueue.main.async {
-                        self.mapview.removeAnnotations(self.mapview.annotations)
-                        self.mapview.addAnnotations(self.myBathrooms)
-                    }
-                } else {
-                    print("failed trying to decode data")
+        DataManger.shared.makeAPIRequest(at: position, accessible: accessible, unisex: unisex, limit: limit, calling:{
+            var brAnnotations : [BathroomAnnocatation] = []
+            for br : Bathroom in DataManger.shared.getBathrooms() {
+                if let lat = br.latitude, let lng = br.longitude, let brId = br.id {
+                    let coord = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                    let newBr = BathroomAnnocatation(coordinate: coord, id: brId, bathroom: br)
+                    brAnnotations.append(newBr)
                 }
+                self.mapview.removeAnnotations(self.mapview.annotations)
+                self.mapview.addAnnotations(brAnnotations)
             }
-        }
-        task.resume();
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
