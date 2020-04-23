@@ -8,18 +8,8 @@
 
 import UIKit
 
-//
-//let id : Int?
-//let name : String?
-//let street : String?
-//let city : String?
-//let state : String?
-//let accessible : Bool?
-//let unisex : Bool?
-//let directions : String?
-//let latitude : Double?
-//let longitude : Double?
-//let distance : Double?
+
+import MapKit
 
 class BathroomDetailVC : UIViewController {
     
@@ -32,6 +22,7 @@ class BathroomDetailVC : UIViewController {
     @IBOutlet var comment : UILabel!
     @IBOutlet var accessibleImage : UIImageView!
     @IBOutlet var unisexImage : UIImageView!
+    @IBOutlet var minimap : MKMapView!
     
     override func viewWillAppear(_ animated: Bool) {
         if let bathroom = bathroom {
@@ -74,5 +65,39 @@ class BathroomDetailVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        minimap.delegate = self
+        centerOnMap()
+    }
+    
+    func centerOnMap() {
+        let lat : Double?  =  bathroom.latitude
+        let lng : Double? = bathroom.longitude
+        guard let mlat = lat else {return}
+        guard let mlng = lng else {return}
+        let location = CLLocationCoordinate2D(latitude: mlat, longitude: mlng)
+        let regionRadius : CLLocationDistance = 100
+        let region = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        minimap.setRegion(region, animated: false)
+    }
+}
+
+extension BathroomDetailVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "BathroomAnnotationIdentifier"
+        guard let brAnnotation = annotation as? BathroomAnnocatation else { return nil }
+        
+        var annotationView : MKAnnotationView?
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            annotationView = dequeuedView
+            annotationView?.annotation = brAnnotation
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        }
+        
+        if let annotationView = annotationView {
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named:"brIcon")
+        }
+        return annotationView
     }
 }

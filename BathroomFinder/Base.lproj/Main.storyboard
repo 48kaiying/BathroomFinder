@@ -478,20 +478,26 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GnI-5i-4Kr">
+                                <rect key="frame" x="20" y="470.5" width="374" height="317.5"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GnI-5i-4Kr" firstAttribute="top" secondItem="LPw-uF-WW2" secondAttribute="bottom" constant="20" id="0cm-kG-DJe"/>
                             <constraint firstItem="SX3-kZ-6lX" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="1bu-uC-fyQ"/>
                             <constraint firstItem="KEi-DW-Lc9" firstAttribute="top" secondItem="5xw-XR-9J6" secondAttribute="bottom" constant="5" id="23S-s8-qQo"/>
                             <constraint firstItem="yMs-6z-hXj" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="3qP-ds-hT8"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="Ezv-kW-M0T" secondAttribute="trailing" constant="20" id="5oH-Ur-8HH"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="LPw-uF-WW2" secondAttribute="trailing" constant="20" id="7iz-9z-Ulh"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="5xw-XR-9J6" secondAttribute="trailing" constant="20" id="9Bb-SZ-yMg"/>
+                            <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="GnI-5i-4Kr" secondAttribute="trailing" constant="20" id="BiY-9j-rXZ"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="Au6-H7-EeN" secondAttribute="trailing" constant="20" id="EBh-DM-MDc"/>
                             <constraint firstItem="5xw-XR-9J6" firstAttribute="top" secondItem="h5t-Fx-X1g" secondAttribute="bottom" constant="22" id="H9h-3C-oIf"/>
                             <constraint firstItem="Z6F-Bf-ghM" firstAttribute="top" secondItem="adx-EY-MZP" secondAttribute="bottom" constant="14" id="HXc-Dv-76I"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="pca-gg-vBw" secondAttribute="trailing" constant="20" id="Ih9-on-aYE"/>
                             <constraint firstItem="KEi-DW-Lc9" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="K6I-TW-Jh5"/>
+                            <constraint firstItem="GnI-5i-4Kr" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="KZN-bc-SMb"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="SX3-kZ-6lX" secondAttribute="trailing" constant="20" id="MqJ-Gd-LxV"/>
                             <constraint firstItem="Ezv-kW-M0T" firstAttribute="top" secondItem="Au6-H7-EeN" secondAttribute="bottom" constant="33" id="N7V-BZ-AX7"/>
                             <constraint firstItem="adx-EY-MZP" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="OSm-4j-yKT"/>
@@ -500,6 +506,7 @@
                             <constraint firstItem="LPw-uF-WW2" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="Udj-Yi-ipu"/>
                             <constraint firstItem="LiB-j4-d9f" firstAttribute="trailing" secondItem="NKS-KQ-dAb" secondAttribute="trailing" constant="20" id="Vvx-CM-teS"/>
                             <constraint firstItem="Au6-H7-EeN" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="WUw-Rg-QkI"/>
+                            <constraint firstItem="LiB-j4-d9f" firstAttribute="bottom" secondItem="GnI-5i-4Kr" secondAttribute="bottom" constant="20" id="Wi1-ri-HvO"/>
                             <constraint firstItem="yMs-6z-hXj" firstAttribute="top" secondItem="Au6-H7-EeN" secondAttribute="bottom" constant="35" id="XOZ-Pz-WQx"/>
                             <constraint firstItem="Z6F-Bf-ghM" firstAttribute="leading" secondItem="LiB-j4-d9f" secondAttribute="leading" constant="20" id="YLw-a5-A2X"/>
                             <constraint firstItem="Au6-H7-EeN" firstAttribute="top" secondItem="LiB-j4-d9f" secondAttribute="top" constant="30" id="b2C-2W-ceT"/>
@@ -528,6 +535,7 @@
                         <outlet property="comment" destination="LPw-uF-WW2" id="Xst-0t-UBi"/>
                         <outlet property="direction" destination="NKS-KQ-dAb" id="k0K-C5-dXe"/>
                         <outlet property="distance" destination="yMs-6z-hXj" id="R8T-c9-u7K"/>
+                        <outlet property="minimap" destination="GnI-5i-4Kr" id="QQy-zk-fPU"/>
                         <outlet property="name" destination="Au6-H7-EeN" id="xBE-i6-AK9"/>
                         <outlet property="unisexImage" destination="Z6F-Bf-ghM" id="sAA-Y4-oTu"/>
                         <outlet property="upvotes" destination="Ezv-kW-M0T" id="3ua-Te-5RW"/>
@@ -536,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKe-bm-V5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="-550"/>
+            <point key="canvasLocation" x="1234.7826086956522" y="-550.44642857142856"/>
         </scene>
         <!--Search-->
         <scene sceneID="HpC-Sw-bgD">
